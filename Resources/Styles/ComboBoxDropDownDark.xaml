@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:themes="clr-namespace:Syncfusion.Maui.Core.Themes;assembly=Syncfusion.Maui.Inputs"
+                    x:Class="SyncFusionTest.Resources.Styles.ComboBoxDropDownDark">
+
+    <x:String x:Key="SfComboBoxTheme">DarkTheme</x:String>
+    <Color x:Key="SfComboBoxDropdownBackground">#6E6E6E</Color>
+    <x:Double x:Key="SfComboBoxNormalDropdownStrokeThickness">0</x:Double>
+    <x:Double x:Key="SfComboBoxNormalDropdownItemsFontSize">16</x:Double>
+    <Color x:Key="SfComboBoxDropdownBorder">Transparent</Color>
+    <Color x:Key="SfComboBoxNormalDropdownSelectionBackground">#404040</Color>
+</ResourceDictionary>

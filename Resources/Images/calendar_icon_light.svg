@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 32.000001 31.999999"
+   xml:space="preserve"
+   sodipodi:docname="calendar_icon.svg"
+   width="32"
+   height="32"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs522"><rect
+     x="3.8608146"
+     y="11.322581"
+     width="24.352831"
+     height="15.888737"
+     id="rect629" /></defs><sodipodi:namedview
+   id="namedview520"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   showborder="false"
+   inkscape:zoom="26.93732"
+   inkscape:cx="11.211212"
+   inkscape:cy="15.665998"
+   inkscape:window-width="2256"
+   inkscape:window-height="1470"
+   inkscape:window-x="-11"
+   inkscape:window-y="-11"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style511">
+	.st0{fill:none;stroke:#000000;stroke-width:1.28;stroke-linejoin:round;stroke-miterlimit:6.4;}
+</style>
+<path
+   class="st0"
+   d="M 7.0907696,3.5227725 H 2.6077159 c -0.3091761,0 -0.6183522,0.1545881 -0.6183522,0.6183522 V 29.493566 c 0,0.309176 0.3091761,0.618353 0.6183522,0.618353 H 29.35145 c 0.309176,0 0.618352,-0.309177 0.618352,-0.618353 V 4.1411247 C 30.12439,3.6773606 29.815214,3.5227725 29.35145,3.5227725 h -4.483054 m -3.091761,0 H 9.0882239 M 1.8347756,9.2425307 H 29.660626"
+   id="path513"
+   sodipodi:nodetypes="csssssscsccccc" />
+
+<path
+   class="st0"
+   d="m 24.193167,6.1507695 h -1.236705 c -0.309176,0 -0.618352,-0.3091761 -0.618352,-0.6183522 V 1.6677158 c 0,-0.3091761 0.309176,-0.6183522 0.618352,-0.6183522 h 1.236705 c 0.309176,0 0.618352,0.3091761 0.618352,0.6183522 v 3.7101134 c 0,0.4637642 -0.309176,0.7729403 -0.618352,0.7729403 z m -15.3042176,0 H 7.8068329 c -0.3091761,0 -0.6183522,-0.3091761 -0.6183522,-0.7729403 V 1.6677158 c 0,-0.3091761 0.3091761,-0.6183522 0.6183522,-0.6183522 h 1.2367046 c 0.3091761,0 0.6183522,0.3091761 0.6183522,0.6183522 v 3.7101134 c 0,0.4637642 -0.3091761,0.7729403 -0.7729403,0.7729403 z"
+   id="path517" />
+<text
+   xml:space="preserve"
+   id="text627"
+   style="white-space:pre;shape-inside:url(#rect629);fill:#000000"
+   transform="translate(4.9739508,0.9280805)"><tspan
+     x="3.8613281"
+     y="22.270229"
+     id="tspan6008">15</tspan></text></svg>
