@@ -47,7 +47,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -59,10 +58,6 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\apple_pay_icon_dark.svg" />
 	  <None Remove="Resources\Images\apple_pay_icon_light.svg" />
-	  <None Remove="Resources\Images\calendar_icon_dark.svg" />
-	  <None Remove="Resources\Images\calendar_icon_light.svg" />
-	  <None Remove="Resources\Images\password_icon_dark.svg" />
-	  <None Remove="Resources\Images\password_icon_light.svg" />
 	  <None Remove="Resources\Images\user_icon_dark.svg" />
 	  <None Remove="Resources\Images\user_icon_light.svg" />
 	  <None Remove="Resources\Images\visa_icon_dark.svg" />
