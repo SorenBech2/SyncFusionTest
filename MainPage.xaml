@@ -14,7 +14,7 @@
             </Border.Shadow>
             <sfinputs:SfComboBox x:Name="paymentTypComboBox" 
                     Placeholder="Select PaymentType" PlaceholderColor="DarkGray" FontSize="16" 
-                    ItemsSource="{Binding PaymentTypesList}" TextMemberPath="PaymentType" DisplayMemberPath="Icon_Light"
+                    ItemsSource="{Binding PaymentTypesList}" TextMemberPath="PaymentType" 
                     WidthRequest="335" HeightRequest="55" HorizontalOptions="StartAndExpand" Margin="10,0,0,-6"   
                     Background="Transparent" 
                     DropDownIconColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource DarkModeArrowColor}}"
@@ -29,7 +29,7 @@
 
                             <!-- AppThemeBinding does not work with Image Source inside ComboBox -->
                             <Image Grid.Column="0"
-                                HorizontalOptions="StartAndExpand" VerticalOptions="Center" Source="{AppThemeBinding Light=Icon_Light, Dark=Icon_Dark}" 
+                                HorizontalOptions="StartAndExpand" VerticalOptions="Center" Source="{Binding Icon_Light}" 
                                 MaximumHeightRequest="35" Margin="10,0,0,0" />
 
                             <Label Grid.Column="1" 
@@ -41,29 +41,78 @@
             </sfinputs:SfComboBox>
         </Border>
 
-        <Border HeightRequest="160" WidthRequest="355" Padding="15,15,0,0"  Margin="0,40,0,0">
+        <Border HeightRequest="200" WidthRequest="355" Padding="15,15,0,0"  Margin="0,40,0,0">
             <Border.Shadow>
                 <Shadow Brush="{AppThemeBinding Light=LightGray, Dark=Gray}" Offset="5,5" Opacity="0.5"/>
             </Border.Shadow>
             <VerticalStackLayout>
                 <Label Text="Name of CardHolder" FontSize="Small" FontAttributes="Bold" />
                 <HorizontalStackLayout>
-                    
+
                     <!-- AppThemeBinding work fine with Image Source outside ComboBox -->
                     <Image Source="{AppThemeBinding Light='user_icon_light', Dark='user_icon_dark'}" 
                            Aspect="AspectFit" Opacity="0.3" WidthRequest="15" VerticalOptions="Center"/>
-                    
+
                     <Entry x:Name="CardHolderNameEntry"  Text="{Binding CardHolderName}" FontSize="Small" Keyboard="Default" Placeholder="Name as Printed on Card" 
                         PlaceholderColor="DarkGray" HeightRequest="35" WidthRequest="300" VerticalOptions="Center" Margin="0,0,0,-6" />
                 </HorizontalStackLayout>
-                
+
                 <Label Text="Card Number" FontSize="Small" FontAttributes="Bold" Padding="0,20,0,0"/>
-                
+
                 <sfinputs:SfMaskedEntry x:Name="CardNumberEntry" Value="{Binding CardNumber}" WidthRequest="300" MaskType="Simple" Mask="0000 0000 0000 0000"
-                        PromptChar="X" HidePromptOnLeave="True" Margin="0,0,0,-6" Placeholder="XXXX XXXX XXXX XXXX" PlaceholderColor="DarkGray" Keyboard="Numeric" Background="Transparent"
+                        PromptChar="Y" HidePromptOnLeave="True" Margin="0,0,0,-6" Placeholder="XXXX XXXX XXXX XXXX" PlaceholderColor="DarkGray" Keyboard="Numeric" Background="Transparent"
                         FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource WhiteSmoke}}" 
                         ValueMaskFormat="ExcludePromptAndLiterals" ClearButtonVisibility="WhileEditing"  />
-                
+
+                <HorizontalStackLayout>
+                    <!-- AppThemeBinding work fine with Image Source outside ComboBox -->
+                    <Image Source="{AppThemeBinding Light='calendar_icon_light', Dark='calendar_icon_dark'}" Aspect="AspectFit" Opacity="0.3" WidthRequest="15" VerticalOptions="Center"/>
+
+                    <sfinputs:SfComboBox x:Name="ExpirationMonthsEntry" 
+                        Placeholder="MM" PlaceholderColor="DarkGray" FontSize="Small"
+                        ItemsSource="{Binding ExpirationMonths}" TextMemberPath="Months"  SelectedIndex="{Binding ExpirationMonthsPickerIndex}"
+                        WidthRequest="65" HeightRequest="35" VerticalOptions="Center" Margin="5,0,-10,-6"
+                        Background="Transparent"  Stroke="Transparent" 
+                        DropDownIconColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource DarkModeArrowColor}}" 
+                        TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource WhiteSmoke}}"
+                        IsClearButtonVisible="False" >
+                        <sfinputs:SfComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="model:DateInformation">
+                                <Grid VerticalOptions="Center" HorizontalOptions="Start"
+                                    ColumnDefinitions="45"
+                                    RowDefinitions="40">
+                                    <Label Grid.Column="0" 
+                                         VerticalTextAlignment="Center" FontSize="16" FontAttributes="Bold" Text="{Binding Months}" 
+                                        Margin="10,0,0,0" />
+                                </Grid>
+                            </DataTemplate>
+                        </sfinputs:SfComboBox.ItemTemplate>
+                    </sfinputs:SfComboBox>
+
+                    <Label Text=" / " FontSize="Medium" VerticalOptions="End" />
+
+                    <sfinputs:SfComboBox x:Name="ExpirationYearsEntry" 
+                        Placeholder="YYYY" PlaceholderColor="DarkGray" FontSize="Small" 
+                        ItemsSource="{Binding ExpirationYears}" TextMemberPath="Years" SelectedIndex="{Binding ExpirationYearsPickerIndex}"     
+                        WidthRequest="73" HeightRequest="35" VerticalOptions="Center" Margin="0,0,0,-6"   
+                        Background="Transparent" Stroke="Transparent"
+                        DropDownIconColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource DarkModeArrowColor}}" 
+                        TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource WhiteSmoke}}"   
+                        IsClearButtonVisible="False" >
+                        <sfinputs:SfComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="model:DateInformation">
+                                <Grid VerticalOptions="Center" HorizontalOptions="Start"
+                                    ColumnDefinitions="55"
+                                    RowDefinitions="40">
+                                    <Label Grid.Column="0"
+                                        FontSize="16"  Text="{Binding Years}" Margin="10,0,0,0"/>
+                                </Grid>
+                            </DataTemplate>
+                        </sfinputs:SfComboBox.ItemTemplate>
+                    </sfinputs:SfComboBox>
+                </HorizontalStackLayout>
+                <Line X2="165" Stroke="Black"/>
+                <Line X1="210" X2="270" />
             </VerticalStackLayout>
         </Border>
     </VerticalStackLayout>
